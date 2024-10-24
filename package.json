@@ -13,6 +13,8 @@
     "sass": "^1.69.3"
   },
   "scripts": {
+    "push": "git add . && git commit -m 'commit' && git push",
+    "clear": "rm -rf ./docs && rm -rf ./web_dist",
     "dev": "grunt watch",
     "build": "grunt build --verbose",
     "start": "node node-dev-server.js"

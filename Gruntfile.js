@@ -26,7 +26,7 @@ module.exports = function (grunt) {
 				},
 				files: [{
 					src: ['**/*.pug', '!**/_*.pug'],
-					dest: "docs/",
+					dest: "web_dist/",
 					ext: ".html",
 					cwd: "src/pug/",
 					expand: true
@@ -44,7 +44,7 @@ module.exports = function (grunt) {
 					expand: true,
 					cwd: 'src/sass/',
 					src: ['*.scss'],
-					dest: 'docs/css/',
+					dest: 'web_dist/css/',
 					ext: '.css'
 				}]
 			}
@@ -57,16 +57,16 @@ module.exports = function (grunt) {
 				]
 			},
 			dist: {
-				src: ['docs/css/*.css']
+				src: ['web_dist/css/*.css']
 			}
 		},
 		cssmin: {
 			target: {
 				files: [{
 					expand: true,
-					cwd: 'docs/css',
+					cwd: 'web_dist/css',
 					src: ['*.css', '!*.min.css'],
-					dest: 'docs/css',
+					dest: 'web_dist/css',
 					ext: '.min.css'
 				}]
 			}
